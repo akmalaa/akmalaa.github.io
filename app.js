@@ -1,3 +1,40 @@
+const timeCont = document.querySelector('.time');
+
+setInterval(() => {
+    const desiredTimeZone = "Asia/jakarta";
+    const now = new Date();
+    
+    const options = {
+      timeZone: desiredTimeZone,
+      hour12: true,
+      hour: 'numeric',
+      minute: 'numeric'
+    };
+    
+    const currentTime = now.toLocaleString("en-US", options);
+    
+    timeCont.innerHTML = currentTime;
+}, 1000);
+
+const a = document.querySelectorAll("a");
+const nav = document.querySelector(".cont-header");
+const tod = document.querySelector(".tod");
+let marker = tod.offsetTop/1.1;
+console.log(marker.offsetTop);
+window.addEventListener('scroll', () => {
+    if (window.scrollY > marker){
+        for(let i = 0; i < a.length ; i++){
+            a[i].style.color ='white'; 
+            nav.style.color ='white'; 
+        }
+    } else {
+        for(let i = 0; i < 4 ; i++){
+            a[i].style.color ='#2d2d2d'; 
+            nav.style.color ='#2d2d2d';
+        }
+    }
+})
+
 function appearingTitleAbout(){
     let titleAbout =  document.querySelector(".titleAbout");
     let titleAboutAppear = titleAbout.getBoundingClientRect().top;
@@ -46,34 +83,6 @@ function appearingTitleSkill(){
     }
     else if (text2Appear > screenPosition){
         text2.classList.remove("titleSkillAppear");
-    }
-
-}
-
-function appearingLine(){
-    let text2 =  document.querySelector(".horizontalLine");
-    let text2Appear = text2.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.1;
-
-    if (text2Appear < screenPosition){
-        text2.classList.add("horizontalLineAppear");
-    }
-    else if (text2Appear > screenPosition){
-        text2.classList.remove("horizontalLineAppear");
-    }
-
-}
-
-function appearingSkillTool(){
-    let text2 =  document.querySelector(".skillTool");
-    let text2Appear = text2.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.3;
-
-    if (text2Appear < screenPosition){
-        text2.classList.add("skillToolAppear");
-    }
-    else if (text2Appear > screenPosition){
-        text2.classList.remove("skillToolAppear");
     }
 
 }
@@ -136,40 +145,14 @@ function appearingContact(){
 }
 
 //=======================================================================
-
-function appearingTextContact(){
-    let Inviting =  document.querySelector(".textProject");
-    let InvitingAppear = Inviting.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.5;
-
-    if (InvitingAppear < screenPosition){
-        Inviting.classList.add("textProjectAppear");
-    }
-    else if (InvitingAppear > screenPosition){
-        Inviting.classList.remove("textProjectAppear");
-    }
-
-}
-
-//adding blur at "Project"
-function mauAddBlur(){
-    let mau = document.querySelector(".contentProject");
-
-    mau.classList.add("addBlur");
-}
-
 window.addEventListener("scroll", appearingTitleAbout);
 window.addEventListener("scroll", appearingText1);
 window.addEventListener("scroll", appearingText2);
 window.addEventListener("scroll", appearingTitleProject);
 window.addEventListener("scroll", appearingProjects);
 window.addEventListener("scroll", appearingContact);
-window.addEventListener("scroll", appearingTextContact);
 window.addEventListener("scroll", appearingTitleSkill);
-window.addEventListener("scroll", appearingSkillTool);
 window.addEventListener("scroll", appearingSkillCoding);
-window.addEventListener("scroll", appearingLine);
-document.querySelector(".box").addEventListener("mouseenter", mauAddBlur);
 
 // hide-show navbar
 var prevScrollpos = window.pageYOffset;
@@ -178,20 +161,24 @@ var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector(".cont-header").style.top = "0";
   } 
-  else if((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-    document.querySelector(".cont-header").style.top = "0";
-  } 
-  else {document.querySelector(".cont-header").style.top = "-100px";
+  else {document.querySelector(".cont-header").style.top = "-135px";
   }
   prevScrollpos = currentScrollPos;
 }
 
-var element = document.querySelector(".cont-header");
-element.addEventListener("mouseover", function() {
+ const mek = document.querySelector(".mek");
+ let marker2 = mek.offsetTop - 2;
+ window.addEventListener('scroll', () => {
+     if(window.scrollY > marker2) {
+        console.log("kontol");
+        document.querySelector(".cont-header").style.top = "0";
+     }
+ });
+
+nav.addEventListener("mouseover", function() {
     document.querySelector(".cont-header").style.top = "0";
 });
-element.addEventListener("mouseleave", function() {
-    document.querySelector(".cont-header").style.top = "-100px";
+nav.addEventListener("mouseleave", function() {
     if((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
         document.querySelector(".cont-header").style.top = "0";
     } 
@@ -202,49 +189,76 @@ element.addEventListener("mouseleave", function() {
 });
 
 // changing bg-color when its on "about"
-let about = document.getElementById("About");
-let aboutFromTop = about.offsetTop / 1.6;
-let project = document.getElementById("Project");
-let projectFromTop = project.offsetTop / 1.4;
-let a = document.querySelectorAll("a");
-let i;
+// let about = document.getElementById("About");
+// let aboutFromTop = about.offsetTop / 1.6;
+// let project = document.getElementById("Project");
+// let projectFromTop = project.offsetTop / 1.4;
+// let a = document.querySelectorAll("a");
+// let i;
 
-let line = document.querySelector(".horizontalLine");
+// let line = document.querySelector(".horizontalLine");
 
-window.addEventListener("scroll", function() {
+// window.addEventListener("scroll", function() {
     
-    //Changing style on About
-    if (window.scrollY >= aboutFromTop && window.scrollY <= projectFromTop){
-        document.body.style.backgroundColor = "#e9c600";
-        document.body.style.color = "#0f0f0f";
-        line.style.backgroundColor = "#0f0f0f"
+//     //Changing style on About
+//     if (window.scrollY >= aboutFromTop && window.scrollY <= projectFromTop){
+//         document.body.style.backgroundColor = "#e9c600";
+//         document.body.style.color = "#0f0f0f";
+//         line.style.backgroundColor = "#0f0f0f"
 
-        for (i = 0 ; i < 4 ; i++){
-            a[i].style.color = "#0f0f0f";
-        }
+//         for (i = 0 ; i < 4 ; i++){
+//             a[i].style.color = "#0f0f0f";
+//         }
 
-    }
+//     }
 
-    //Changing style to default for before About
-    else if (window.scrollY <= aboutFromTop){
-        document.body.style.backgroundColor = "#0f0f0f";
-        document.body.style.color = "white";
-        line.style.backgroundColor = "white"
+//     //Changing style to default for before About
+//     else if (window.scrollY <= aboutFromTop){
+//         document.body.style.backgroundColor = "#0f0f0f";
+//         document.body.style.color = "white";
+//         line.style.backgroundColor = "white"
 
-        for (i = 0 ; i < 4 ; i++){
-            a[i].style.color = "white";
-        }
-    }
+//         for (i = 0 ; i < 4 ; i++){
+//             a[i].style.color = "white";
+//         }
+//     }
 
-    //Changing style to default for after About
-    else if (window.scrollY >= projectFromTop){
-        document.body.style.backgroundColor = "#0f0f0f";
-        document.body.style.color = "white";
-        line.style.backgroundColor = "white"
+//     //Changing style to default for after About
+//     else if (window.scrollY >= projectFromTop){
+//         document.body.style.backgroundColor = "#0f0f0f";
+//         document.body.style.color = "white";
+//         line.style.backgroundColor = "white"
 
-        for (i = 0 ; i < 4; i++){
-            a[i].style.color = "white";
-        }
-    }
+//         for (i = 0 ; i < 4; i++){
+//             a[i].style.color = "white";
+//         }
+//     }
+// });
+
+// cursor
+const cursor = document.querySelector('.cursor');
+window.addEventListener('mousemove', (e) => {
+    cursor.style.top = e.clientY + 'px';
+    cursor.style.left = e.clientX + 'px';
 });
+
+a.forEach(link => {
+    link.addEventListener('mouseover', () => {
+        cursor.classList.add('grow');
+    })
+    link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('grow');
+    })
+})
+
+const contact = document.querySelector('.contact').querySelector('a');
+console.log(contact);
+
+contact.addEventListener('mouseover', () => {
+    cursor.classList.add('grow-more');
+})
+contact.addEventListener('mouseleave', () => {
+    cursor.classList.remove('grow-more');
+})
+
 
