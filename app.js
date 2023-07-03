@@ -1,3 +1,20 @@
+// loading
+const loadWord = document.querySelectorAll('.loading-word');
+const loadWrap = document.querySelector('.loading-wrap');
+const backload = document.querySelector('.bundar');
+
+for (let i = 0; i < loadWord.length; i++) {
+    setTimeout(function timer() {
+      loadWord[i].classList.remove('hidden');
+      loadWord[i-1].classList.add('hidden');
+    }, i * 150);
+  }
+setTimeout(function timer() {
+    loadWrap.style.transform = "translateY(-100%)"
+    backload.style.transform = "translateY(-100%)"
+}, loadWord.length * 200);
+  
+
 const timeCont = document.querySelector('.time');
 
 setInterval(() => {
@@ -20,160 +37,169 @@ const a = document.querySelectorAll("a");
 const nav = document.querySelector(".cont-header");
 const tod = document.querySelector(".tod");
 let marker = tod.offsetTop/1.1;
-console.log(marker.offsetTop);
-window.addEventListener('scroll', () => {
-    if (window.scrollY > marker){
+
+const mek = document.querySelector(".mek");
+let marker2 = mek.offsetTop - 2;
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
+    });
+  
+    scroll.on('scroll', function() {
+      const scrollPositionY = scroll.scroll.instance.scroll.y;
+      if (scrollPositionY > marker){
         for(let i = 0; i < a.length ; i++){
             a[i].style.color ='white'; 
             nav.style.color ='white'; 
         }
-    } else {
-        for(let i = 0; i < 4 ; i++){
-            a[i].style.color ='#2d2d2d'; 
-            nav.style.color ='#2d2d2d';
+        } else {
+            for(let i = 0; i < 4 ; i++){
+                a[i].style.color ='#2d2d2d'; 
+                nav.style.color ='#2d2d2d';
+            }
         }
-    }
-})
+    });
 
-function appearingTitleAbout(){
-    let titleAbout =  document.querySelector(".titleAbout");
-    let titleAboutAppear = titleAbout.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2;
+    scroll.on('scroll', function() {
+        let titleAbout =  document.querySelector(".titleAbout");
+        let titleAboutAppear = titleAbout.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.2;
 
-    if (titleAboutAppear < screenPosition){
-        titleAbout.classList.add("titleAboutAppear");
-    }
-    else if (titleAboutAppear > screenPosition){
-        titleAbout.classList.remove("titleAboutAppear");
-    }
-}
-function appearingText1(){
-    let text1 =  document.querySelector(".text1");
-    let text1Appear = text1.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.5;
+        if (titleAboutAppear < screenPosition){
+            titleAbout.classList.add("titleAboutAppear");
+        }
+        else if (titleAboutAppear > screenPosition){
+            titleAbout.classList.remove("titleAboutAppear");
+        }
+    });
+    
+    scroll.on('scroll', function() {
+        let text1 =  document.querySelector(".text1");
+        let text1Appear = text1.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.5;
 
-    if (text1Appear < screenPosition){
-        text1.classList.add("text1Appear");
-    }
-    else if (text1Appear > screenPosition){
-        text1.classList.remove("text1Appear");
-    }
-}
-function appearingText2(){
-    let text2 =  document.querySelector(".text2");
-    let text2Appear = text2.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.5;
+        if (text1Appear < screenPosition){
+            text1.classList.add("text1Appear");
+        }
+        else if (text1Appear > screenPosition){
+            text1.classList.remove("text1Appear");
+        }
+    });
+    
+    scroll.on('scroll', function() {
+        let text2 =  document.querySelector(".text2");
+        let text2Appear = text2.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.5;
 
-    if (text2Appear < screenPosition){
-        text2.classList.add("text2Appear");
-    }
-    else if (text2Appear > screenPosition){
-        text2.classList.remove("text2Appear");
-    }
+        if (text2Appear < screenPosition){
+            text2.classList.add("text2Appear");
+        }
+        else if (text2Appear > screenPosition){
+            text2.classList.remove("text2Appear");
+        }
+    });
+    
+    scroll.on('scroll', function() {
+        let text2 =  document.querySelector(".titleSkill");
+        let text2Appear = text2.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.2;
 
-}
+        if (text2Appear < screenPosition){
+            text2.classList.add("titleSkillAppear");
+        }
+        else if (text2Appear > screenPosition){
+            text2.classList.remove("titleSkillAppear");
+        }
+    });
+    
+    scroll.on('scroll', function() {
+        let text2 =  document.querySelector(".skillCoding");
+        let text2Appear = text2.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.5;
 
-function appearingTitleSkill(){
-    let text2 =  document.querySelector(".titleSkill");
-    let text2Appear = text2.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2;
+        if (text2Appear < screenPosition){
+            text2.classList.add("skillCodingAppear");
+        }
+        else if (text2Appear > screenPosition){
+            text2.classList.remove("skillCodingAppear");
+        }
+    });
+    
+    scroll.on('scroll', function() {
+        let titleProject =  document.querySelector(".titleProject");
+        let titleProjectAppear = titleProject.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.3;
 
-    if (text2Appear < screenPosition){
-        text2.classList.add("titleSkillAppear");
-    }
-    else if (text2Appear > screenPosition){
-        text2.classList.remove("titleSkillAppear");
-    }
+        if (titleProjectAppear < screenPosition){
+            titleProject.classList.add("titleProjectAppear");
+        }
+        else if (titleProjectAppear > screenPosition){
+            titleProject.classList.remove("titleProjectAppear");
+        }
+    });
+    
+    scroll.on('scroll', function() {
+        let projectsContainer =  document.querySelector(".projectsContainer");
+        let projectsContainerAppear = projectsContainer.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.2;
 
-}
+        if (projectsContainerAppear < screenPosition){
+            projectsContainer.classList.add("projectsContainerAppear");
+        }
+        else if (projectsContainerAppear > screenPosition){
+            projectsContainer.classList.remove("projectsContainerAppear");
+        }
+    });
+    
+    scroll.on('scroll', function() {
+        let textContact =  document.querySelector(".contact");
+        let textContactAppear = textContact.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.2;
 
-function appearingSkillCoding(){
-    let text2 =  document.querySelector(".skillCoding");
-    let text2Appear = text2.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.5;
+        if (textContactAppear < screenPosition){
+            textContact.classList.add("textContactAppear");
+        }
+        else if (textContactAppear > screenPosition){
+            textContact.classList.remove("textContactAppear");
+        }
+    });
+    
+    scroll.on('scroll', function() {
+        let textContact =  document.querySelector(".contact");
+        let textContactAppear = textContact.getBoundingClientRect().top;
+        let screenPosition = window.innerHeight / 1.2;
 
-    if (text2Appear < screenPosition){
-        text2.classList.add("skillCodingAppear");
-    }
-    else if (text2Appear > screenPosition){
-        text2.classList.remove("skillCodingAppear");
-    }
-
-}
-
-//===========================================================
-
-function appearingTitleProject(){
-    let titleProject =  document.querySelector(".titleProject");
-    let titleProjectAppear = titleProject.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.3;
-
-    if (titleProjectAppear < screenPosition){
-        titleProject.classList.add("titleProjectAppear");
-    }
-    else if (titleProjectAppear > screenPosition){
-        titleProject.classList.remove("titleProjectAppear");
-    }
-
-}
-function appearingProjects(){
-    let projectsContainer =  document.querySelector(".projectsContainer");
-    let projectsContainerAppear = projectsContainer.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2;
-
-    if (projectsContainerAppear < screenPosition){
-        projectsContainer.classList.add("projectsContainerAppear");
-    }
-    else if (projectsContainerAppear > screenPosition){
-        projectsContainer.classList.remove("projectsContainerAppear");
-    }
-
-}
-
-function appearingContact(){
-    let textContact =  document.querySelector(".contact");
-    let textContactAppear = textContact.getBoundingClientRect().top;
-    let screenPosition = window.innerHeight / 1.2;
-
-    if (textContactAppear < screenPosition){
-        textContact.classList.add("textContactAppear");
-    }
-    else if (textContactAppear > screenPosition){
-        textContact.classList.remove("textContactAppear");
-    }
-
-}
-
-//=======================================================================
-window.addEventListener("scroll", appearingTitleAbout);
-window.addEventListener("scroll", appearingText1);
-window.addEventListener("scroll", appearingText2);
-window.addEventListener("scroll", appearingTitleProject);
-window.addEventListener("scroll", appearingProjects);
-window.addEventListener("scroll", appearingContact);
-window.addEventListener("scroll", appearingTitleSkill);
-window.addEventListener("scroll", appearingSkillCoding);
-
-// hide-show navbar
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector(".cont-header").style.top = "0";
-  } 
-  else {document.querySelector(".cont-header").style.top = "-135px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-
- const mek = document.querySelector(".mek");
- let marker2 = mek.offsetTop - 2;
- window.addEventListener('scroll', () => {
-     if(window.scrollY > marker2) {
-        console.log("kontol");
+        if (textContactAppear < screenPosition){
+            textContact.classList.add("textContactAppear");
+        }
+        else if (textContactAppear > screenPosition){
+            textContact.classList.remove("textContactAppear");
+        }
+    });
+   
+    var prevScrollpos = scroll.scroll.instance.scroll.y;
+    scroll.on('scroll', function() {
+        var currentScrollPos = scroll.scroll.instance.scroll.y;
+        if (prevScrollpos >= currentScrollPos) {
         document.querySelector(".cont-header").style.top = "0";
-     }
- });
+        } 
+        else {
+        document.querySelector(".cont-header").style.top = "-135px";
+        }
+        prevScrollpos = currentScrollPos;
+    });
+    
+    scroll.on('scroll', function() {
+        var scrollPositionY = scroll.scroll.instance.scroll.y;
+        if(scrollPositionY > marker2) {
+            document.querySelector(".cont-header").style.top = "0";
+         }
+    });
+
+  });
 
 nav.addEventListener("mouseover", function() {
     document.querySelector(".cont-header").style.top = "0";
@@ -188,55 +214,16 @@ nav.addEventListener("mouseleave", function() {
     }
 });
 
-// changing bg-color when its on "about"
-// let about = document.getElementById("About");
-// let aboutFromTop = about.offsetTop / 1.6;
-// let project = document.getElementById("Project");
-// let projectFromTop = project.offsetTop / 1.4;
-// let a = document.querySelectorAll("a");
-// let i;
-
-// let line = document.querySelector(".horizontalLine");
-
-// window.addEventListener("scroll", function() {
-    
-//     //Changing style on About
-//     if (window.scrollY >= aboutFromTop && window.scrollY <= projectFromTop){
-//         document.body.style.backgroundColor = "#e9c600";
-//         document.body.style.color = "#0f0f0f";
-//         line.style.backgroundColor = "#0f0f0f"
-
-//         for (i = 0 ; i < 4 ; i++){
-//             a[i].style.color = "#0f0f0f";
-//         }
-
-//     }
-
-//     //Changing style to default for before About
-//     else if (window.scrollY <= aboutFromTop){
-//         document.body.style.backgroundColor = "#0f0f0f";
-//         document.body.style.color = "white";
-//         line.style.backgroundColor = "white"
-
-//         for (i = 0 ; i < 4 ; i++){
-//             a[i].style.color = "white";
-//         }
-//     }
-
-//     //Changing style to default for after About
-//     else if (window.scrollY >= projectFromTop){
-//         document.body.style.backgroundColor = "#0f0f0f";
-//         document.body.style.color = "white";
-//         line.style.backgroundColor = "white"
-
-//         for (i = 0 ; i < 4; i++){
-//             a[i].style.color = "white";
-//         }
-//     }
-// });
-
 // cursor
 const cursor = document.querySelector('.cursor');
+
+const contact = document.querySelector('.contact').querySelector('a');
+const navCursor = document.querySelector('.nav');
+const cvCursor = document.querySelector('.cv');
+const emailCursor = document.querySelector('.email');
+const logo = document.querySelector('.logo');
+const navlist = document.querySelectorAll(".navlist");
+
 window.addEventListener('mousemove', (e) => {
     cursor.style.top = e.clientY + 'px';
     cursor.style.left = e.clientX + 'px';
@@ -245,20 +232,37 @@ window.addEventListener('mousemove', (e) => {
 a.forEach(link => {
     link.addEventListener('mouseover', () => {
         cursor.classList.add('grow');
+        navCursor.style.display = "block";
+    })
+    link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('grow');
+        navCursor.style.display = "none";
+    })
+});
+
+navlist.forEach(link => {
+    link.addEventListener('mouseover', () => {
+        cursor.classList.add('grow');
+        navCursor.style.display = "none";
     })
     link.addEventListener('mouseleave', () => {
         cursor.classList.remove('grow');
     })
-})
-
-const contact = document.querySelector('.contact').querySelector('a');
-console.log(contact);
+});
 
 contact.addEventListener('mouseover', () => {
     cursor.classList.add('grow-more');
-})
+    emailCursor.style.display = "block";
+    navCursor.style.display = "none";
+});
 contact.addEventListener('mouseleave', () => {
     cursor.classList.remove('grow-more');
-})
+    emailCursor.style.display = "none";
+});
 
-
+logo.addEventListener('mouseover', () => {
+    cursor.classList.add('grow-more');
+});
+logo.addEventListener('mouseleave', () => {
+    cursor.classList.remove('grow-more');
+});

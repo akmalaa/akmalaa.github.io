@@ -3,7 +3,9 @@
 
 <head>
    <title>Trippa Portofolio</title>
+   <link rel="stylesheet" href="base-locomotive.css">
    <link rel="stylesheet" href="style.css" />
+   <link rel="shortcut icon" href="./asstes/Trippa.png" type="image/x-icon">
 </head>
 
 <body>
@@ -24,13 +26,16 @@
          </div>
       </header>
 
-      <div class="cursor"></div>
+      <div class="cursor">
+         <div class="nav">Go!</div>
+         <div class="email">Mail Me!</div>
+      </div>
 
-      <!-- <div class="loading-wrap">
+      <div class="loading-wrap">
          <div class="loading">
             <div class="bullet"></div>
             <div class="hellos">
-               <h2 class="loading-word hidden">Hello</h2>
+               <h2 class="loading-word hidde">Hello</h2>
                <h2 class="loading-word hidden">Hello</h2>
                <h2 class="loading-word hidden">Hello</h2>
                <h2 class="loading-word hidden">Hello</h2>
@@ -48,24 +53,28 @@
             </div>
          </div>
       </div>
-      <div class="bundar"></div> -->
+      <div class="bundar"></div>
 
-      <main>
+      <main data-scroll-container>
          <section id="Home">
             <div class="contentHomeOut">
                <div class="contentHome">
-                  <div class="myName">
-                     <h2 class="title"><span class="accent">A</span>kmal <span class="accent">A</span>liffandhi <span
-                           class="accent">A</span>nwar</h2>
+                  <div class="myName" data-scroll data-scroll-speed="-2" data-scroll-position="top"
+                     data-scroll-delay="0.02">
+                     <h2 class="title">
+                        <span class="accent">A</span>kmal
+                        <span class="accent">A</span>liffandhi
+                        <span class="accent">A</span>nwar
+                     </h2>
                   </div>
                   <svg class="outward" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                      <path d="m248-246-42-42 412-412H240v-60h480v480h-60v-378L248-246Z" />
                   </svg>
-                  <div class="bio">
+                  <div class="bio" data-scroll data-scroll-speed="4">
                      <p>Forever Learner</p>
                      <p class="accent">Web Developer</p>
                   </div>
-                  <div class="time-wrap">
+                  <div class="time-wrap" data-scroll data-scroll-speed="6">
                      <div class="text-time">
                         <p>My Local Time</p>
                      </div>
@@ -74,7 +83,6 @@
                         <p>(GMT +7)</p>
                      </div>
                   </div>
-                  <!-- <img class="photo" src="./asstes/mehbulet.png" alt="myself" /> -->
                </div>
             </div>
          </section>
@@ -195,8 +203,8 @@
 
                <div class="textContact">
                   <div class="this">
-                     <h2 class="contact">Interested? Don't hesitate <a href="mailto:akmalaanwar@gmail.com"
-                           target="_blank" title="Contact me via e-mail!">to contact</a> me.</h2>
+                     <h2 class="contact"><a href="mailto:akmalaanwar@gmail.com" target="_blank">Interested? Don't
+                           hesitate to contact me.</a></h2>
                   </div>
                </div>
 
@@ -242,6 +250,7 @@
       </main>
    </div>
 
+   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
    <script src="app.js"></script>
 
 

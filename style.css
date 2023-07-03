@@ -15,13 +15,13 @@ font-family: 'Zen Kaku Gothic New', sans-serif;
 
 html {
    scroll-behavior: smooth;
+   cursor: none;
 }
 
 body {
    color: white;
    background-color: #0f0f0f;
    overflow-x: hidden;
-   transition: background-color 1s;
 }
 
 body::-webkit-scrollbar {
@@ -81,10 +81,57 @@ p {
 
 a {
    color: white;
+   cursor: none;
 }
 
 .accent {
    color: #e9c600;
+}
+
+/* loading */
+.loading-wrap {
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   background-color: #e9c600;
+   color: #2d2d2d;
+   z-index: 100;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all 0.42s ease-out;
+   display: none;
+}
+
+.bundar {
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   background-color: #383838;
+   z-index: 99;
+   transition: all 0.52s ease-in;
+   display: none;
+}
+
+.loading {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.bullet {
+   background-color: #2d2d2d;
+   border-radius: 100%;
+   width: 1.5em;
+   height: 1.5em;
+}
+
+.loading-word {
+   border: none;
+}
+
+.hidden {
+   display: none;
 }
 
 /*Header*/
@@ -103,7 +150,6 @@ a {
 
 .logo {
    user-select: auto;
-   cursor: pointer;
    font-size: 5em;
 }
 
@@ -299,7 +345,6 @@ ul.navbar li {
    grid-template-columns: auto auto auto;
    gap: 30px;
    align-items: center;
-   justify-content: flex-start;
 }
 
 /* Skills */
@@ -360,7 +405,7 @@ ul.skillList {
 }
 
 .link-icon {
-   width: 2em;
+   width: 1.8em;
 }
 
 /* for the text animation */
@@ -632,7 +677,6 @@ ul.skillList {
 }
 
 .contact a {
-   cursor: pointer;
    color: white;
    text-decoration: underline;
    transition: 0.4s ease-in-out;
@@ -692,6 +736,10 @@ ul.socList {
    transition: all 0.7s ease-in-out;
 }
 
+.contact a {
+   padding: 40px 55px;
+}
+
 .textContactAppear {
    opacity: 1;
    transform: translateY(0%);
@@ -713,7 +761,8 @@ ul.socList {
    transform: translate(-50%, -50%);
    pointer-events: none;
    z-index: 11;
-   transition: 0.15s ease-out;
+   transition: all 0.1s ease-out;
+   transition-property: width, height;
    backdrop-filter: invert();
    transform-origin: 100% 100%;
    display: flex;
@@ -727,6 +776,15 @@ ul.socList {
 }
 
 .grow-more {
-   width: 6em;
-   height: 6em;
+   width: 10em;
+   height: 10em;
+}
+
+.nav,
+.email {
+   padding: 15px;
+   font-size: 20px;
+   text-align: center;
+   display: none;
+   color: #2d2d2d;
 }
