@@ -12,22 +12,6 @@
 
 <body>
    <div class="content">
-      <header>
-         <div class="conHeaderOut">
-            <div class="cont-header">
-               <h1 class="logo">Trippa</h1>
-               <div class="cont-navbar">
-                  <ul class="navbar">
-                     <li class="list"><a class="navlist" href="#Home">Home</a></li>
-                     <li class="list"><a class="navlist" href="#About">About</a></li>
-                     <li class="list"><a class="navlist" href="#Project">Projects</a></li>
-                     <li class="list"><a class="navlist" href="#Contact">Contact</a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </header>
-
       <div class="cursor">
          <div class="nav">Go!</div>
          <div class="email">Mail Me!</div>
@@ -57,12 +41,63 @@
       </div>
       <div class="bundar"></div>
 
+      <header>
+         <div class="conHeaderOut">
+            <div class="cont-header">
+               <h1 class="logo">Trippa</h1>
+               <div class="burger">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
+                     <path fill="currentColor"
+                        d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+                  </svg>
+               </div>
+               <div class="cont-navbar">
+                  <ul class="navbar">
+                     <p class="mob-nav-text">Navigation</p>
+                     <li class="list"><a class="navlist" href="#Home">Home</a></li>
+                     <li class="list"><a class="navlist" href="#About">About</a></li>
+                     <li class="list"><a class="navlist" href="#Project">Projects</a></li>
+                     <li class="list"><a class="navlist" href="#Contact">Contact</a></li>
+                  </ul>
+
+                  <div class="social-nav">
+                     <p class="mob-nav-text">Socials</p>
+                     <ul class="socList1">
+                        <li class="social" title="Gmail"><a href="https://www.instagram.com/akmal__aa/" target="_blank">
+                              <svg class="svgSocial instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                 viewBox="0 0 20 20">
+                                 <path
+                                    d="M13 10a3 3 0 1 1-6 0c0-.171.018-.338.049-.5H6v3.997c0 .278.225.503.503.503h6.995a.503.503 0 0 0 .502-.503V9.5h-1.049c.031.162.049.329.049.5zm-3 2a2 2 0 1 0-.001-4.001A2 2 0 0 0 10 12zm2.4-4.1h1.199a.301.301 0 0 0 .301-.3V6.401a.301.301 0 0 0-.301-.301H12.4a.301.301 0 0 0-.301.301V7.6c.001.165.136.3.301.3zM10 .4A9.6 9.6 0 0 0 .4 10a9.6 9.6 0 0 0 9.6 9.6a9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 10 .4zm5 13.489C15 14.5 14.5 15 13.889 15H6.111C5.5 15 5 14.5 5 13.889V6.111C5 5.5 5.5 5 6.111 5h7.778C14.5 5 15 5.5 15 6.111v7.778z" />
+                              </svg>
+                           </a></li>
+                        <li class="social" title="Linkedin"><a
+                              href="https://www.linkedin.com/in/akmal-aliffandhi-anwar-530b53202/" target="_blank">
+                              <svg class="svgSocial linkedin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                 viewBox="0 0 20 20">
+                                 <path
+                                    d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699v3.699z" />
+                              </svg>
+                           </a></li>
+                        <li class="social" title="Github"><a href="https://github.com/akmalaa" target="_blank">
+                              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                              <svg class="svgSocial Github" xmlns="http://www.w3.org/2000/svg" width="1024"
+                                 height="1024" viewBox="0 0 1024 1024">
+                                 <path
+                                    d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5C64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9c26.4 39.1 77.9 32.5 104 26c5.7-23.5 17.9-44.5 34.7-60.8c-140.6-25.2-199.2-111-199.2-213c0-49.5 16.3-95 48.3-131.7c-20.4-60.5 1.9-112.3 4.9-120c58.1-5.2 118.5 41.6 123.2 45.3c33-8.9 70.7-13.6 112.9-13.6c42.4 0 80.2 4.9 113.5 13.9c11.3-8.6 67.3-48.8 121.3-43.9c2.9 7.7 24.7 58.3 5.5 118c32.4 36.8 48.9 82.7 48.9 132.3c0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9c177.1-59.7 304.6-227 304.6-424.1c0-247.2-200.4-447.3-447.5-447.3z" />
+                              </svg>
+                           </a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+
       <main data-scroll-container>
          <section id="Home">
             <div class="contentHomeOut">
                <div class="contentHome">
-                  <div class="myName" data-scroll data-scroll-speed="2" data-scroll-position="top"
-                     data-scroll-delay="0.02">
+                  <div class="myName" data-scroll data-scroll-speed="4" data-scroll-position="top">
                      <h2 class="title">
                         <span class="accent">A</span>kmal
                         <span class="accent">A</span>liffandhi
@@ -72,11 +107,11 @@
                   <svg class="outward" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                      <path d="m248-246-42-42 412-412H240v-60h480v480h-60v-378L248-246Z" />
                   </svg>
-                  <div class="bio" data-scroll data-scroll-speed="4">
+                  <div class="bio" data-scroll data-scroll-speed="1" data-scroll-delay="0.02">
                      <p>Forever Learner</p>
                      <p class="accent">Web Developer</p>
                   </div>
-                  <div class="time-wrap" data-scroll data-scroll-speed="6">
+                  <div class="time-wrap" data-scroll data-scroll-speed="2" data-scroll-delay="0.01">
                      <div class="text-time">
                         <p>My Local Time</p>
                      </div>
@@ -99,19 +134,15 @@
                   </div>
                   <div id="text1" class="text1">
                      <p>
-                        Hi there! I'm a person that has a passion in Web-Developing. Currently starting my career as
+                        I'm a person that has a passion in Web-Developing. Currently starting my career as
                         <span class="accent">a Front-End Developer</span class="accent"> and still learning.
                      </p>
                   </div>
-                  <div id="text2" class="text2">
-                     <a class="link"
+                  <div id="text2" class="text2" data-scroll data-scroll-speed="1.5" data-scroll-edlay="0.02">
+                     <a class=" link"
                         href="https://drive.google.com/file/d/1rtLpa2t7FD6PKE86KSPyFHod9tNmFBr-/view?usp=sharing"
                         target="_blank">
-                        Take a look at my CV!
-                        <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                           <path fill="currentColor"
-                              d="M450-160v-371L330-411l-43-43 193-193 193 193-43 43-120-120v371h-60ZM160-597v-143q0-24 18-42t42-18h520q24 0 42 18t18 42v143h-60v-143H220v143h-60Z" />
-                        </svg>
+                        My cv!
                      </a>
                   </div>
                </div>
@@ -218,30 +249,26 @@
                      <h5>Also Visit:</h5>
                      <ul class="socList">
                         <li class="social" title="Gmail"><a href="https://www.instagram.com/akmal__aa/" target="_blank">
-                              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                              <svg class="svgSocial instagram" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 50 50">
+                              <svg class="svgSocial instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                 viewBox="0 0 20 20">
                                  <path
-                                    d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" />
+                                    d="M13 10a3 3 0 1 1-6 0c0-.171.018-.338.049-.5H6v3.997c0 .278.225.503.503.503h6.995a.503.503 0 0 0 .502-.503V9.5h-1.049c.031.162.049.329.049.5zm-3 2a2 2 0 1 0-.001-4.001A2 2 0 0 0 10 12zm2.4-4.1h1.199a.301.301 0 0 0 .301-.3V6.401a.301.301 0 0 0-.301-.301H12.4a.301.301 0 0 0-.301.301V7.6c.001.165.136.3.301.3zM10 .4A9.6 9.6 0 0 0 .4 10a9.6 9.6 0 0 0 9.6 9.6a9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 10 .4zm5 13.489C15 14.5 14.5 15 13.889 15H6.111C5.5 15 5 14.5 5 13.889V6.111C5 5.5 5.5 5 6.111 5h7.778C14.5 5 15 5.5 15 6.111v7.778z" />
                               </svg>
                            </a></li>
                         <li class="social" title="Linkedin"><a
                               href="https://www.linkedin.com/in/akmal-aliffandhi-anwar-530b53202/" target="_blank">
-                              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                              <svg viewBox="0 0 24 24" class="svgSocial Linkedin" fill="none" stroke="#fff"
-                                 xmlns="http://www.w3.org/2000/svg">
+                              <svg class="svgSocial linkedin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                 viewBox="0 0 20 20">
                                  <path
-                                    d="M3.50143 6.90595C2.37528 5.7193 3.24155 3.95978 5.14733 4.0007C7.05312 4.04162 7.61619 6.12849 6.83655 7.68341C6.21284 8.92734 4.35326 9.34744 3.50143 9.402V20H9.17547V8.95189H12.9004V10.7523C15.4993 7.68341 21 8.62454 21 13.0029V20H17.1019V14.5169C17.1019 12.0208 15.9757 11.5093 14.698 12.0208C13.4202 12.5323 12.9004 13.453 12.9004 15.3352C12.9004 17.5612 12.9004 19.3726 12.9004 20"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                                    d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699v3.699z" />
                               </svg>
                            </a></li>
                         <li class="social" title="Github"><a href="https://github.com/akmalaa" target="_blank">
                               <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                              <svg viewBox="0 0 24 24" class="svgSocial Github" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
+                              <svg class="svgSocial Github" xmlns="http://www.w3.org/2000/svg" width="1024"
+                                 height="1024" viewBox="0 0 1024 1024">
                                  <path
-                                    d="M11.7444 14C5.13962 13 5.64768 8.5 7.67987 7C7.27882 6.39155 6.66375 4 7.1718 3.00001C8.18792 3.5 9.55173 4.23944 10.2202 5C12.2524 4 15.3007 4 16.8249 5C17.226 4.18873 18.6968 3.42254 19.3652 3C19.9668 3.60845 19.5323 5.98592 19.3652 7C20.3678 9.19718 20.8894 12.5 15.3007 14C16.1273 14.6688 17.4571 16.2652 18.3819 18.0893C19.0373 19.3821 17.7844 20.5701 16.3571 20.3176C15.3606 20.1413 14.2545 20 13.2685 20C12.0745 20 10.494 20.2071 9.12617 20.4329C7.71155 20.6663 6.56735 19.4472 7.29296 18.2106C7.81974 17.3128 8.48393 16.4725 9.20408 16C8.95342 15.662 7.9605 14.6887 6.15574 15.5C3.89979 16.5141 2.60607 14.2676 3.10739 13"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                                    d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5C64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9c26.4 39.1 77.9 32.5 104 26c5.7-23.5 17.9-44.5 34.7-60.8c-140.6-25.2-199.2-111-199.2-213c0-49.5 16.3-95 48.3-131.7c-20.4-60.5 1.9-112.3 4.9-120c58.1-5.2 118.5 41.6 123.2 45.3c33-8.9 70.7-13.6 112.9-13.6c42.4 0 80.2 4.9 113.5 13.9c11.3-8.6 67.3-48.8 121.3-43.9c2.9 7.7 24.7 58.3 5.5 118c32.4 36.8 48.9 82.7 48.9 132.3c0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9c177.1-59.7 304.6-227 304.6-424.1c0-247.2-200.4-447.3-447.5-447.3z" />
                               </svg>
                            </a></li>
                      </ul>

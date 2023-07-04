@@ -175,12 +175,20 @@ a {
 /* For the Navigation Bar */
 .cont-navbar {
    display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.burger {
+   display: none;
+}
+
+.socList1 {
+   display: none;
 }
 
 ul.navbar {
    display: flex;
-   justify-content: space-between;
-   align-items: center;
 }
 
 ul.navbar li {
@@ -209,6 +217,10 @@ ul.navbar li {
    transform: scaleX(0);
    transform-origin: right;
    transition: transform 0.4s ease-out;
+}
+
+.mob-nav-text {
+   display: none;
 }
 
 .list:hover .navlist::after,
@@ -371,98 +383,50 @@ ul.skillList {
 }
 
 .link {
+   height: 9em;
+   width: 9em;
+   color: #2d2d2d;
    position: relative;
+   text-decoration: none;
    margin-top: 30px;
    display: flex;
    gap: 10px;
    font-size: 1.3rem;
    align-items: center;
    justify-content: center;
-   border-radius: 10px;
+   border-radius: 100%;
+   padding: 5px;
    border: 1px #e9c600 solid;
-   transition: all 0.32s ease-in-out;
+   transition: all 0.52s ease-in-out;
+   overflow: hidden;
 }
 
 .link::before {
    position: absolute;
    content: "";
-   height: 0;
+   height: 100%;
    width: 100%;
-   bottom: 0;
+   bottom: -100%;
    left: 0;
-   border-radius: 10px;
+   border-radius: 100%;
    z-index: -1;
-   transition: all 0.32s ease-in-out;
+   transform: scaleY(3);
+   transform-origin: bottom;
+   background-color: #e9c600;
+   transition: all 1s ease-out;
 }
 
 .link:hover {
-   color: #2d2d2d;
+   color: #ffffff;
 }
 
 .link:hover::before {
-   background-color: #e9c600;
-   height: 100%;
+   transform: scaleY(0);
 }
 
 .link-icon {
    width: 1.8em;
 }
-
-/* for the text animation */
-.titleAbout {
-   transform: translateY(30%);
-   opacity: 0;
-   transition: all 0.7s ease-in-out;
-}
-
-.titleAboutAppear {
-   opacity: 1;
-   transform: translateY(0);
-}
-
-.text1 {
-   transform: translateY(70%);
-   opacity: 0;
-   transition: all 0.7s ease-in-out;
-}
-
-.text1Appear {
-   opacity: 1;
-   transform: translateY(0);
-}
-.text2 {
-   transform: translateY(70%);
-   opacity: 0;
-   transition: all 0.7s ease-in-out;
-}
-
-.text2Appear {
-   opacity: 1;
-   transform: translateY(0);
-}
-
-.titleSkill {
-   transform: translateY(30%);
-   opacity: 0;
-   transition: all 0.7s ease-in-out;
-}
-
-.titleSkillAppear {
-   opacity: 1;
-   transform: translateY(0);
-}
-
-.skillCoding {
-   transform: translateY(50%);
-   opacity: 0;
-   transition: all 0.7s ease-in-out;
-}
-
-.skillCodingAppear {
-   opacity: 1;
-   transform: translateY(0);
-}
-
 /* end of About */
 
 /* Projects */
@@ -706,18 +670,11 @@ ul.socList {
 }
 
 .svgSocial {
-   stroke: white;
+   stroke: none;
+   fill: white;
    stroke-width: 1;
    width: 1.5rem;
    height: 1.5rem;
-}
-.Github {
-   width: 1.6rem;
-   height: 1.6rem;
-}
-
-.svgSocial.instagram {
-   fill: white;
 }
 
 .svgSocial.instagram:hover {
@@ -737,7 +694,7 @@ ul.socList {
 }
 
 .contact a {
-   padding: 40px 55px;
+   padding: 40px 0;
 }
 
 .textContactAppear {

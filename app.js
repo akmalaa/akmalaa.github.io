@@ -42,7 +42,7 @@ const tod = document.querySelector(".tod");
 let marker = tod.offsetTop/1.1;
 
 const mek = document.querySelector(".mek");
-let marker2 = mek.offsetTop - 2;
+let marker2 = mek.offsetTop /1.07;
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scroll.on('scroll', function() {
       const scrollPositionY = scroll.scroll.instance.scroll.y;
       if (scrollPositionY > marker){
-        for(let i = 0; i < a.length ; i++){
+        for(let i = 0; i < 4 ; i++){
             a[i].style.color ='white'; 
             nav.style.color ='white'; 
         }
@@ -66,70 +66,70 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    scroll.on('scroll', function() {
-        let titleAbout =  document.querySelector(".titleAbout");
-        let titleAboutAppear = titleAbout.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.2;
+    // scroll.on('scroll', function() {
+    //     let titleAbout =  document.querySelector(".titleAbout");
+    //     let titleAboutAppear = titleAbout.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.2;
 
-        if (titleAboutAppear < screenPosition){
-            titleAbout.classList.add("titleAboutAppear");
-        }
-        else if (titleAboutAppear > screenPosition){
-            titleAbout.classList.remove("titleAboutAppear");
-        }
-    });
+    //     if (titleAboutAppear < screenPosition){
+    //         titleAbout.classList.add("titleAboutAppear");
+    //     }
+    //     // else if (titleAboutAppear > screenPosition){
+    //     //     titleAbout.classList.remove("titleAboutAppear");
+    //     // }
+    // });
     
-    scroll.on('scroll', function() {
-        let text1 =  document.querySelector(".text1");
-        let text1Appear = text1.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.5;
+    // scroll.on('scroll', function() {
+    //     let text1 =  document.querySelector(".text1");
+    //     let text1Appear = text1.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.5;
 
-        if (text1Appear < screenPosition){
-            text1.classList.add("text1Appear");
-        }
-        else if (text1Appear > screenPosition){
-            text1.classList.remove("text1Appear");
-        }
-    });
+    //     if (text1Appear < screenPosition){
+    //         text1.classList.add("text1Appear");
+    //     }
+    //     // else if (text1Appear > screenPosition){
+    //     //     text1.classList.remove("text1Appear");
+    //     // }
+    // });
     
-    scroll.on('scroll', function() {
-        let text2 =  document.querySelector(".text2");
-        let text2Appear = text2.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.5;
+    // scroll.on('scroll', function() {
+    //     let text2 =  document.querySelector(".text2");
+    //     let text2Appear = text2.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.5;
 
-        if (text2Appear < screenPosition){
-            text2.classList.add("text2Appear");
-        }
-        else if (text2Appear > screenPosition){
-            text2.classList.remove("text2Appear");
-        }
-    });
+    //     if (text2Appear < screenPosition){
+    //         text2.classList.add("text2Appear");
+    //     }
+    //     // else if (text2Appear > screenPosition){
+    //     //     text2.classList.remove("text2Appear");
+    //     // }
+    // });
     
-    scroll.on('scroll', function() {
-        let text2 =  document.querySelector(".titleSkill");
-        let text2Appear = text2.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.2;
+    // scroll.on('scroll', function() {
+    //     let text2 =  document.querySelector(".titleSkill");
+    //     let text2Appear = text2.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.2;
 
-        if (text2Appear < screenPosition){
-            text2.classList.add("titleSkillAppear");
-        }
-        else if (text2Appear > screenPosition){
-            text2.classList.remove("titleSkillAppear");
-        }
-    });
+    //     if (text2Appear < screenPosition){
+    //         text2.classList.add("titleSkillAppear");
+    //     }
+    //     // else if (text2Appear > screenPosition){
+    //     //     text2.classList.remove("titleSkillAppear");
+    //     // }
+    // });
     
-    scroll.on('scroll', function() {
-        let text2 =  document.querySelector(".skillCoding");
-        let text2Appear = text2.getBoundingClientRect().top;
-        let screenPosition = window.innerHeight / 1.5;
+    // scroll.on('scroll', function() {
+    //     let text2 =  document.querySelector(".skillCoding");
+    //     let text2Appear = text2.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.5;
 
-        if (text2Appear < screenPosition){
-            text2.classList.add("skillCodingAppear");
-        }
-        else if (text2Appear > screenPosition){
-            text2.classList.remove("skillCodingAppear");
-        }
-    });
+    //     if (text2Appear < screenPosition){
+    //         text2.classList.add("skillCodingAppear");
+    //     }
+    //     // else if (text2Appear > screenPosition){
+    //     //     text2.classList.remove("skillCodingAppear");
+    //     // }
+    // });
     
     scroll.on('scroll', function() {
         let titleProject =  document.querySelector(".titleProject");
@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (titleProjectAppear < screenPosition){
             titleProject.classList.add("titleProjectAppear");
         }
-        else if (titleProjectAppear > screenPosition){
-            titleProject.classList.remove("titleProjectAppear");
-        }
+        // else if (titleProjectAppear > screenPosition){
+        //     titleProject.classList.remove("titleProjectAppear");
+        // }
     });
     
     scroll.on('scroll', function() {
@@ -152,9 +152,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (projectsContainerAppear < screenPosition){
             projectsContainer.classList.add("projectsContainerAppear");
         }
-        else if (projectsContainerAppear > screenPosition){
-            projectsContainer.classList.remove("projectsContainerAppear");
-        }
+        // else if (projectsContainerAppear > screenPosition){
+        //     projectsContainer.classList.remove("projectsContainerAppear");
+        // }
     });
     
     scroll.on('scroll', function() {
@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (textContactAppear < screenPosition){
             textContact.classList.add("textContactAppear");
         }
-        else if (textContactAppear > screenPosition){
-            textContact.classList.remove("textContactAppear");
-        }
+        // else if (textContactAppear > screenPosition){
+        //     textContact.classList.remove("textContactAppear");
+        // }
     });
     
     scroll.on('scroll', function() {
@@ -178,9 +178,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (textContactAppear < screenPosition){
             textContact.classList.add("textContactAppear");
         }
-        else if (textContactAppear > screenPosition){
-            textContact.classList.remove("textContactAppear");
-        }
+        // else if (textContactAppear > screenPosition){
+        //     textContact.classList.remove("textContactAppear");
+        // }
     });
    
     var prevScrollpos = scroll.scroll.instance.scroll.y;
@@ -268,4 +268,16 @@ logo.addEventListener('mouseover', () => {
 });
 logo.addEventListener('mouseleave', () => {
     cursor.classList.remove('grow-more');
+});
+
+
+const burger = document.querySelector('.burger');
+const contNav = document.querySelector('.cont-navbar');
+burger.addEventListener('click', () => {
+    if(contNav.classList.contains('isActive')){
+        contNav.classList.remove('isActive')
+    }
+    else {
+        contNav.classList.add('isActive')
+    }
 });

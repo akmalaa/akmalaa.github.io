@@ -1,17 +1,151 @@
-/* @media (max-width: 768px) {
-   body {
+@media screen and (max-width: 1040px) {
+   .logo {
+      font-size: 4em;
+   }
+
+   .contentHome h2.title {
+      font-size: 10vw;
+   }
+
+   .bio p {
+      font-size: 4vw;
+   }
+
+   .outward {
+      width: 8vw;
+   }
+
+   .this {
+      padding: 150px 0px;
+   }
+
+   .text1 p {
+      font-size: 2.5vw;
+   }
+
+   .link {
+      height: 6em;
+      width: 6em;
+      font-size: 2vw;
+   }
+
+   .icons {
+      width: 8vw;
+   }
+
+   .contentAbout {
+      grid-column-gap: 20px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   html {
+      cursor: unset;
+   }
+
+   a {
+      cursor: pointer;
+   }
+
+   .cursor {
+      display: none;
+   }
+
+   .burger {
+      position: relative;
+      display: block;
+      z-index: 2;
+   }
+
+   .cont-navbar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      padding: 150px 0 50px 40px;
       background-color: #e9c600;
+      align-items: unset;
+      justify-content: space-between;
+      flex-direction: column;
+      transition: all 0.32s ease-out;
+      transform: translateX(100%);
+   }
+
+   .isActive {
+      transform: translateX(0%);
+   }
+
+   ul.navbar {
+      flex-direction: column;
+   }
+
+   ul.navbar li {
+      padding: 5px 0;
+   }
+
+   .navlist {
+      font-size: 3em;
+   }
+
+   .social:nth-child(1) {
+      padding: 0 1rem 0 0;
+   }
+
+   .mob-nav-text {
+      margin-bottom: 15px;
+      display: block;
+   }
+
+   .socList1 {
+      display: flex;
+      list-style: none;
+   }
+
+   .socList1 .svgSocial {
+      display: inline-block;
+      min-width: 44px;
+      min-height: 44px;
+      stroke: none;
+      fill: #2d2d2d;
+   }
+
+   .outward {
+      transform: rotate(270deg);
+      grid-row: 4/5;
+      align-self: end;
+   }
+
+   .contentAbout {
+      margin: unset;
+      grid-template-columns: 10% 1fr 10%;
+      grid-template-rows: 5% repeat(2, 1fr) 5%;
+      grid-column-gap: unset;
+   }
+
+   .about {
+      grid-column: 2/3;
+      grid-row: 2/3;
+   }
+
+   .skillSet {
+      grid-column: 2/3;
+      grid-row: 3/4;
+   }
+
+   .skillList {
+      justify-items: center;
+   }
+
+   .text1 p {
+      font-size: 1.5em;
+   }
+
+   .link {
+      font-size: 1.3em;
+   }
+
+   .icons {
+      width: 5em;
    }
 }
-
-@media (min-width: 769px) and (max-width: 1024px) {
-   body {
-      background-color: #8d8d8d;
-   }
-}
-
-@media (min-width: 1025px) {
-   body {
-      background-color: #8d8d8d;
-   }
-} */
