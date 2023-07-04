@@ -39,7 +39,7 @@ body::after {
    width: 100%;
    height: 100%;
    top: 0;
-   background-image: url(./asstes/ss.gif);
+   background-image: url(../../asstes/ss.gif);
    background-size: cover;
    opacity: 1.8%;
    z-index: -1;
@@ -236,7 +236,7 @@ ul.navbar li {
    left: 0;
    width: 100%;
    height: 100%;
-   background-image: url(./asstes/meh.jpg);
+   background-image: url(../../asstes/meh.jpg);
    background-position: center;
    background-size: cover;
    background-attachment: fixed;

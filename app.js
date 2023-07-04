@@ -1,3 +1,6 @@
+var w = window.innerWidth;
+console.log(w);
+
 // loading
 const loadWord = document.querySelectorAll('.loading-word');
 const loadWrap = document.querySelector('.loading-wrap');
