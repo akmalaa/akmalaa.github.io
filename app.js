@@ -1,5 +1,14 @@
-var w = window.innerWidth;
-console.log(w);
+// let j = 0;
+// let decrement = 0.1;
+// setInterval (() => {
+//     const name = document.querySelector('.myName');
+//     name.style.transform = `translateX(${j}%)`;
+//         if (j <= -396) {
+//             j = 110;
+//         } else {
+//             j -= decrement;
+//         }
+// }, 1);
 
 // loading
 const loadWord = document.querySelectorAll('.loading-word');
@@ -44,6 +53,11 @@ let marker = tod.offsetTop/1.1;
 const mek = document.querySelector(".mek");
 let marker2 = mek.offsetTop /1.07;
 
+const burger = document.querySelector('.burger');
+const round = document.querySelector('.round');
+const burgerDis = document.querySelector('.disappear');
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const scroll = new LocomotiveScroll({
@@ -56,13 +70,18 @@ document.addEventListener('DOMContentLoaded', function() {
       if (scrollPositionY > marker){
         for(let i = 0; i < 4 ; i++){
             a[i].style.color ='white'; 
-            nav.style.color ='white'; 
         }
-        } else {
+        nav.style.color ='white'; 
+        round.classList.add('isscrolled');
+        burgerDis.style.opacity = '0';
+    } 
+      else {
             for(let i = 0; i < 4 ; i++){
                 a[i].style.color ='#2d2d2d'; 
-                nav.style.color ='#2d2d2d';
             }
+            nav.style.color ='#2d2d2d';
+            round.classList.remove('isscrolled');
+            burgerDis.style.opacity = '1';
         }
     });
 
@@ -187,10 +206,10 @@ document.addEventListener('DOMContentLoaded', function() {
     scroll.on('scroll', function() {
         var currentScrollPos = scroll.scroll.instance.scroll.y;
         if (prevScrollpos >= currentScrollPos) {
-        document.querySelector(".cont-header").style.top = "0";
+        nav.style.top = "0";
         } 
         else {
-        document.querySelector(".cont-header").style.top = "-135px";
+        nav.style.top = "-135px";
         }
         prevScrollpos = currentScrollPos;
     });
@@ -198,21 +217,23 @@ document.addEventListener('DOMContentLoaded', function() {
     scroll.on('scroll', function() {
         var scrollPositionY = scroll.scroll.instance.scroll.y;
         if(scrollPositionY > marker2) {
-            document.querySelector(".cont-header").style.top = "0";
+            nav.style.top = "0";
+            round.classList.remove('isscrolled');
+            burgerDis.style.opacity = '1';
          }
     });
 
   });
 
 nav.addEventListener("mouseover", function() {
-    document.querySelector(".cont-header").style.top = "0";
+    nav.style.top = "0";
 });
 nav.addEventListener("mouseleave", function() {
     if((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
-        document.querySelector(".cont-header").style.top = "0";
+        nav.style.top = "0";
     } 
     else if(document.body.scrollTop = 0 || document.documentElement.scrollTop == 0){
-        document.querySelector(".cont-header").style.top = "0";
+        nav.style.top = "0";
 
     }
 });
@@ -224,6 +245,7 @@ const contact = document.querySelector('.contact').querySelector('a');
 const navCursor = document.querySelector('.nav');
 const cvCursor = document.querySelector('.cv');
 const emailCursor = document.querySelector('.email');
+const cv = document.querySelector('.link');
 const logo = document.querySelector('.logo');
 const navlist = document.querySelectorAll(".navlist");
 
@@ -270,14 +292,32 @@ logo.addEventListener('mouseleave', () => {
     cursor.classList.remove('grow-more');
 });
 
+cv.addEventListener('mouseover', () => {
+    cursor.classList.add('grow-more');
+    cvCursor.style.display = "block";
+    navCursor.style.display = "none";
+});
+cv.addEventListener('mouseleave', () => {
+    cursor.classList.remove('grow-more');
+    cvCursor.style.display = "none";
+});
 
-const burger = document.querySelector('.burger');
 const contNav = document.querySelector('.cont-navbar');
 burger.addEventListener('click', () => {
     if(contNav.classList.contains('isActive')){
+        nav.style.top ='0';
         contNav.classList.remove('isActive')
     }
     else {
         contNav.classList.add('isActive')
     }
 });
+
+
+
+// setInterval (() => {
+//     const name = document.querySelector('.myName');
+//     name.style.transform = `translateX(${j}%)`;
+// }, 1000);
+
+

@@ -52,9 +52,31 @@
    }
 
    .burger {
+      position: fixed;
+      color: #2d2d2d;
+      top: 2.5em;
+      right: 1.5em;
+      display: block;
+      z-index: 11;
+   }
+
+   .disappear {
       position: relative;
       display: block;
-      z-index: 2;
+      z-index: 12;
+   }
+
+   .round {
+      padding: 12px;
+      border-radius: 100%;
+      transition: all 0.32s ease-out;
+      background-color: #e9c600;
+      transform: scale(0);
+      transform-origin: center;
+   }
+
+   .isscrolled {
+      transform: scale(1);
    }
 
    .cont-navbar {
@@ -68,7 +90,7 @@
       align-items: unset;
       justify-content: space-between;
       flex-direction: column;
-      transition: all 0.32s ease-out;
+      transition: all 0.9s cubic-bezier(0.61, 0.04, 0, 1.14);
       transform: translateX(100%);
    }
 
@@ -117,6 +139,7 @@
    }
 
    .contentAbout {
+      min-height: 120vh;
       margin: unset;
       grid-template-columns: 10% 1fr 10%;
       grid-template-rows: 5% repeat(2, 1fr) 5%;
@@ -129,6 +152,7 @@
    }
 
    .skillSet {
+      margin-top: 20px;
       grid-column: 2/3;
       grid-row: 3/4;
    }
@@ -147,5 +171,196 @@
 
    .icons {
       width: 5em;
+   }
+
+   .text2 {
+      position: unset;
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   .contentProject {
+      margin-top: 20px;
+   }
+
+   .contentContact {
+      margin-top: 80px;
+   }
+}
+
+@media screen and (max-width: 540px) {
+   h1 {
+      font-size: 2.5rem;
+   }
+
+   h2 {
+      font-size: 2rem;
+   }
+
+   h5 {
+      font-size: 3vw;
+   }
+
+   p {
+      font-size: 1rem;
+   }
+
+   .cont-navbar {
+      width: 100%;
+   }
+
+   .outward {
+      width: 11vw;
+      transform: rotate(180deg);
+      grid-row: 4/5;
+      align-self: start;
+   }
+
+   .contentHome {
+      width: 100%;
+      overflow-x: hidden;
+   }
+
+   .contentHome::before {
+      background-attachment: unset;
+   }
+
+   .myName {
+      animation-name: example;
+      animation-duration: 25s;
+      animation-iteration-count: infinite;
+      grid-column: 2/4;
+      grid-row: 2/3;
+      align-self: flex-start;
+      white-space: nowrap;
+   }
+
+   .contentHome h2.title {
+      font-size: 5em;
+   }
+
+   .bio {
+      grid-column: 3/4;
+      grid-row: 4/5;
+      align-self: flex-end;
+      justify-self: flex-end;
+   }
+
+   .bio p,
+   .time-wrap p {
+      font-size: 4.8vw;
+   }
+
+   .time-wrap {
+      text-align: start;
+      align-self: flex-end;
+      justify-self: flex-start;
+      grid-row: 4/5;
+      grid-column: 2/3;
+   }
+
+   .about {
+      align-self: center;
+   }
+
+   .text1 {
+      line-height: unset;
+   }
+
+   .text1 p {
+      font-size: 1.2em;
+   }
+
+   .text2 {
+      position: unset;
+      left: unset;
+   }
+
+   .link {
+      width: 100%;
+      height: 2.1em;
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: 10px;
+      background-color: #e9c600;
+   }
+
+   .link::before {
+      background: none;
+   }
+
+   .skillSet {
+      align-self: center;
+   }
+
+   .skillList {
+      justify-content: center;
+   }
+
+   .icons {
+      width: 17vw;
+   }
+
+   .project p {
+      font-size: 1em;
+   }
+
+   .project p:nth-child(2) {
+      display: block;
+      font-size: 0.7em;
+   }
+
+   .right {
+      display: none;
+   }
+
+   .project-name {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .project {
+      flex-direction: column;
+   }
+
+   .contentProject {
+      grid-template-rows: 5% 1fr 5%;
+   }
+
+   .project img {
+      position: unset;
+      transform: unset;
+      visibility: unset;
+      object-fit: cover;
+      opacity: 1;
+      height: 100%;
+      width: 100%;
+      transform: translateY(0);
+   }
+}
+
+@media screen and (max-width: 425px) {
+   .myName {
+      animation-name: example1;
+   }
+}
+
+/* animation */
+
+@keyframes example {
+   0% {
+      transform: translateX(110%);
+   }
+   100% {
+      transform: translateX(-248%);
+   }
+}
+
+@keyframes example1 {
+   0% {
+      transform: translateX(110%);
+   }
+   100% {
+      transform: translateX(-390%);
    }
 }

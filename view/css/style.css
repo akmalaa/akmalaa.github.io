@@ -60,13 +60,6 @@ h2 {
    font-size: 3rem;
 }
 
-h3 {
-   font-family: "Zen Kaku Gothic New", sans-serif;
-   font-size: 2.4rem;
-   font-weight: 500;
-   text-decoration: underline;
-}
-
 h5 {
    font-family: "Zen Kaku Gothic New", sans-serif;
    font-size: 1.1em;
@@ -138,6 +131,7 @@ a {
 .cont-header {
    position: fixed;
    display: flex;
+   align-items: center;
    top: 0;
    justify-content: space-between;
    align-content: center;
@@ -179,7 +173,8 @@ a {
    justify-content: space-between;
 }
 
-.burger {
+.burger,
+.disappear {
    display: none;
 }
 
@@ -382,9 +377,14 @@ ul.skillList {
    font-family: "Arsenal", sans-serif;
 }
 
+.text2 {
+   position: relative;
+   left: calc(100% / 2 - 50px);
+}
+
 .link {
-   height: 9em;
-   width: 9em;
+   height: 8em;
+   width: 8em;
    color: #2d2d2d;
    position: relative;
    text-decoration: none;
@@ -396,7 +396,6 @@ ul.skillList {
    justify-content: center;
    border-radius: 100%;
    padding: 5px;
-   border: 1px #e9c600 solid;
    transition: all 0.52s ease-in-out;
    overflow: hidden;
 }
@@ -406,22 +405,34 @@ ul.skillList {
    content: "";
    height: 100%;
    width: 100%;
+   bottom: 0;
+   left: 0;
+   border-radius: 100%;
+   z-index: -2;
+   background-color: #e9c600;
+}
+
+.link::after {
+   position: absolute;
+   content: "";
+   height: 100%;
+   width: 100%;
    bottom: -100%;
    left: 0;
    border-radius: 100%;
    z-index: -1;
-   transform: scaleY(3);
+   transform: scaleY(0);
    transform-origin: bottom;
-   background-color: #e9c600;
-   transition: all 1s ease-out;
+   background-color: #383838;
+   transition: all 0.6s ease-out;
 }
 
 .link:hover {
    color: #ffffff;
 }
 
-.link:hover::before {
-   transform: scaleY(0);
+.link:hover::after {
+   transform: scaleY(3);
 }
 
 .link-icon {
@@ -494,6 +505,10 @@ ul.skillList {
    font-size: 1.2em;
 }
 
+.project p:nth-child(2) {
+   display: none;
+}
+
 .project img {
    position: absolute;
    visibility: hidden;
@@ -504,6 +519,8 @@ ul.skillList {
    opacity: 0;
    transition: all 0.39s ease;
    transition-delay: 0s;
+   height: 300px;
+   width: 450px;
    z-index: -2;
 }
 
@@ -651,7 +668,7 @@ ul.skillList {
    justify-content: space-between;
    grid-column: 2/3;
    grid-row: 3/4;
-   align-self: center;
+   align-items: center;
 }
 
 ul.socList {
@@ -662,6 +679,7 @@ ul.socList {
 .socialMedia {
    display: flex;
    justify-content: space-around;
+   align-items: center;
    gap: 15px;
 }
 
@@ -677,11 +695,7 @@ ul.socList {
    height: 1.5rem;
 }
 
-.svgSocial.instagram:hover {
-   fill: rgb(233, 198, 0);
-}
 .svgSocial:hover {
-   stroke: rgb(233, 198, 0);
    transform: rotate(10deg);
    transition: transform 0.4s cubic-bezier(0.68, -0.69, 0.26, 1.68);
 }
@@ -694,7 +708,7 @@ ul.socList {
 }
 
 .contact a {
-   padding: 40px 0;
+   padding: 40px 25px;
 }
 
 .textContactAppear {
@@ -738,7 +752,8 @@ ul.socList {
 }
 
 .nav,
-.email {
+.email,
+.cv {
    padding: 15px;
    font-size: 20px;
    text-align: center;
