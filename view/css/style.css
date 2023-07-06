@@ -93,7 +93,6 @@ a {
    justify-content: center;
    align-items: center;
    transition: all 0.42s ease-out;
-   display: none;
 }
 
 .bundar {
@@ -103,7 +102,6 @@ a {
    background-color: #383838;
    z-index: 99;
    transition: all 0.52s ease-in;
-   display: none;
 }
 
 .loading {
@@ -115,8 +113,8 @@ a {
 .bullet {
    background-color: #2d2d2d;
    border-radius: 100%;
-   width: 1.5em;
-   height: 1.5em;
+   width: 0.8em;
+   height: 0.8em;
 }
 
 .loading-word {
