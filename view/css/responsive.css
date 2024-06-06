@@ -343,6 +343,10 @@
    .myName {
       animation-name: example1;
    }
+
+   .contact a {
+      padding: 0px;
+   }
 }
 
 /* animation */
