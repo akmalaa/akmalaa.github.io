@@ -11,7 +11,7 @@
 </head>
 
 <body>
-   <div class="content">
+   <div class="content" data-scroll-container>
       <div class="cursor">
          <div class="nav">Go!</div>
          <div class="cv">Open It!</div>
@@ -61,10 +61,10 @@
                <div class="cont-navbar">
                   <ul class="navbar">
                      <p class="mob-nav-text">Navigation</p>
-                     <li class="list"><a class="navlist" href="#Home">Home</a></li>
-                     <li class="list"><a class="navlist" href="#About">About</a></li>
-                     <li class="list"><a class="navlist" href="#Project">Projects</a></li>
-                     <li class="list"><a class="navlist" href="#Contact">Contact</a></li>
+                     <li class="list"><a class="navlist" href="#Home" data-scroll-to>Home</a></li>
+                     <li class="list"><a class="navlist" href="#About" data-scroll-to>About</a></li>
+                     <li class="list"><a class="navlist" href="#Project" data-scroll-to>Projects</a></li>
+                     <li class="list"><a class="navlist" href="#Contact" data-scroll-to>Contact</a></li>
                   </ul>
 
                   <div class="social-nav">
@@ -100,31 +100,33 @@
          </div>
       </header>
 
-      <main data-scroll-container>
-         <section id="Home">
-            <div class="contentHomeOut">
-               <div class="contentHome">
-                  <div class="myName" data-scroll data-scroll-speed="4" data-scroll-position="top">
-                     <h2 class="title">
-                        <span class="accent">A</span>kmal
-                        <span class="accent">A</span>liffandhi
-                        <span class="accent">A</span>nwar
-                     </h2>
-                  </div>
-                  <svg class="outward" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                     <path d="m248-246-42-42 412-412H240v-60h480v480h-60v-378L248-246Z" />
-                  </svg>
-                  <div class="bio" data-scroll data-scroll-speed="1" data-scroll-delay="0.02">
-                     <p>Forever Learner</p>
-                     <p class="accent">Web Developer</p>
-                  </div>
-                  <div class="time-wrap" data-scroll data-scroll-speed="2" data-scroll-delay="0.01">
-                     <div class="text-time">
-                        <p>My Local Time</p>
+      <main>
+         <section data-scroll-section>
+            <div id="Home">
+               <div class="contentHomeOut">
+                  <div class="contentHome">
+                     <div class="myName" data-scroll data-scroll-speed="4" data-scroll-position="top">
+                        <h2 class="title">
+                           <span class="accent">A</span>kmal
+                           <span class="accent">A</span>liffandhi
+                           <span class="accent">A</span>nwar
+                        </h2>
                      </div>
-                     <div class="time-div">
-                        <p class="time"></p>
-                        <p>(GMT+7)</p>
+                     <svg class="outward" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                        <path d="m248-246-42-42 412-412H240v-60h480v480h-60v-378L248-246Z" />
+                     </svg>
+                     <div class="bio" data-scroll data-scroll-speed="1" data-scroll-delay="0.02">
+                        <p>Forever Learner</p>
+                        <p class="accent">Web Developer</p>
+                     </div>
+                     <div class="time-wrap" data-scroll data-scroll-speed="2" data-scroll-delay="0.01">
+                        <div class="text-time">
+                           <p>My Local Time</p>
+                        </div>
+                        <div class="time-div">
+                           <p class="time"></p>
+                           <p>(GMT+7)</p>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -133,164 +135,172 @@
 
          <p class="tod"></p>
 
-         <section id="About">
-            <div class="contentAbout">
-               <div class="about">
-                  <div class="titleAbout">
-                     <h2>About.</h2>
-                  </div>
-                  <div id="text1" class="text1">
-                     <p>
-                        I'm a person that has a passion in Web-Developing. Currently starting my career as
-                        <span class="accent">a Front-End Developer</span class="accent"> and still learning.
-                     </p>
-                  </div>
-                  <div id="text2" class="text2" data-scroll data-scroll-speed="1">
-                     <a class=" link"
-                        href="https://drive.google.com/file/d/1rtLpa2t7FD6PKE86KSPyFHod9tNmFBr-/view?usp=sharing"
-                        target="_blank">
-                        My cv!
-                     </a>
-                  </div>
-               </div>
-
-               <div class="skillSet">
-                  <div class="titleSkill">
-                     <h2>Skill Set.</h2>
-                  </div>
-
-                  <div class="skillCoding">
-                     <div class="skillList">
-                        <img class="icons" src="./asstes/skillset/html5.svg" alt="" data-scroll>
-                        <img class="icons" src="./asstes/skillset/css3.svg" alt="" data-scroll>
-                        <img class="icons" src="./asstes/skillset/javascipt.svg" alt="" data-scroll>
-                        <img class="icons" src="./asstes/skillset/php.svg" alt="" data-scroll>
-                        <img class="icons" src="./asstes/skillset/mysql.svg" alt="" data-scroll>
-                        <img class="icons" src="./asstes/skillset/bootstrap.svg" alt="" data-scroll>
-                        <img class="icons" src="./asstes/skillset/webpack.svg" alt="" data-scroll>
-                        <img class="icons" src="./asstes/skillset/node-js.svg" alt="" data-scroll>
-                        <img class="icons" src="./asstes/skillset/github.svg" alt="" data-scroll>
+         <section data-scroll-section>
+            <div id="About">
+               <div class="contentAbout">
+                  <div class="about">
+                     <div class="titleAbout">
+                        <h2>About.</h2>
+                     </div>
+                     <div id="text1" class="text1">
+                        <p>
+                           I'm a person that has a passion in Web-Developing. Currently starting my career as
+                           <span class="accent">a Front-End Developer</span class="accent"> and still learning.
+                        </p>
+                     </div>
+                     <div id="text2" class="text2" data-scroll data-scroll-speed="0.8"
+                        data-scroll-direction="horizontal">
+                        <a class=" link"
+                           href="https://drive.google.com/file/d/1rtLpa2t7FD6PKE86KSPyFHod9tNmFBr-/view?usp=sharing"
+                           target="_blank">
+                           My cv!
+                        </a>
                      </div>
                   </div>
 
+                  <div class="skillSet">
+                     <div class="titleSkill">
+                        <h2>Skill Set.</h2>
+                     </div>
+
+                     <div class="skillCoding">
+                        <div class="skillList">
+                           <img class="icons" src="./asstes/skillset/html5.svg" alt="" data-scroll>
+                           <img class="icons" src="./asstes/skillset/css3.svg" alt="" data-scroll>
+                           <img class="icons" src="./asstes/skillset/javascipt.svg" alt="" data-scroll>
+                           <img class="icons" src="./asstes/skillset/php.svg" alt="" data-scroll>
+                           <img class="icons" src="./asstes/skillset/mysql.svg" alt="" data-scroll>
+                           <img class="icons" src="./asstes/skillset/bootstrap.svg" alt="" data-scroll>
+                           <img class="icons" src="./asstes/skillset/webpack.svg" alt="" data-scroll>
+                           <img class="icons" src="./asstes/skillset/node-js.svg" alt="" data-scroll>
+                           <img class="icons" src="./asstes/skillset/github.svg" alt="" data-scroll>
+                        </div>
+                     </div>
+
+                  </div>
                </div>
             </div>
          </section>
 
-         <section id="Project">
-            <div class="contentProject">
-               <div class="titleProject">
-                  <h2>Projects.</h2>
-               </div>
-               <div class="projectsContainer">
-                  <ul class="projects">
-                     <a href="">
-                        <li class="project">
-                           <img src="./asstes/works/meh2.jpg" alt="">
-                           <div class="project-name">
-                              <p>GoSakit</p>
-                              <p>2023</p>
-                           </div>
-                           <svg class="right" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
-                              width="48">
-                              <path d="M450-120v-606l-90 90-42-42 162-162 162 162-42 42-90-90v606h-60Z" />
-                           </svg>
-                        </li>
-                     </a>
-                     <div class="line"></div>
+         <section data-scroll-section>
+            <div id="Project">
+               <div class="contentProject">
+                  <div class="titleProject">
+                     <h2>Projects.</h2>
+                  </div>
+                  <div class="projectsContainer">
+                     <ul class="projects">
+                        <a href="">
+                           <li class="project">
+                              <img src="./asstes/works/meh2.jpg" alt="">
+                              <div class="project-name">
+                                 <p>GoSakit</p>
+                                 <p>2023</p>
+                              </div>
+                              <svg class="right" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
+                                 width="48">
+                                 <path d="M450-120v-606l-90 90-42-42 162-162 162 162-42 42-90-90v606h-60Z" />
+                              </svg>
+                           </li>
+                        </a>
+                        <div class="line"></div>
 
-                     <a href="">
-                        <li class="project">
-                           <img src="./asstes/works/meh2.jpg" alt="">
-                           <div class="project-name">
-                              <p>Restalog</p>
-                              <p>2023</p>
-                           </div>
-                           <svg class="right" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
-                              width="48">
-                              <path d="M450-120v-606l-90 90-42-42 162-162 162 162-42 42-90-90v606h-60Z" />
-                           </svg>
-                        </li>
-                     </a>
-                     <div class="line"></div>
+                        <a href="">
+                           <li class="project">
+                              <img src="./asstes/works/meh2.jpg" alt="">
+                              <div class="project-name">
+                                 <p>Restalog</p>
+                                 <p>2023</p>
+                              </div>
+                              <svg class="right" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
+                                 width="48">
+                                 <path d="M450-120v-606l-90 90-42-42 162-162 162 162-42 42-90-90v606h-60Z" />
+                              </svg>
+                           </li>
+                        </a>
+                        <div class="line"></div>
 
-                     <a href="">
-                        <li class="project">
-                           <img src="./asstes/works/meh2.jpg" alt="">
-                           <div class="project-name">
-                              <p>Kasir App</p>
-                              <p>2022</p>
-                           </div>
-                           <svg class="right" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
-                              width="48">
-                              <path d="M450-120v-606l-90 90-42-42 162-162 162 162-42 42-90-90v606h-60Z" />
-                           </svg>
-                        </li>
-                     </a>
-                     <div class="line"></div>
+                        <a href="">
+                           <li class="project">
+                              <img src="./asstes/works/meh2.jpg" alt="">
+                              <div class="project-name">
+                                 <p>Kasir App</p>
+                                 <p>2022</p>
+                              </div>
+                              <svg class="right" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
+                                 width="48">
+                                 <path d="M450-120v-606l-90 90-42-42 162-162 162 162-42 42-90-90v606h-60Z" />
+                              </svg>
+                           </li>
+                        </a>
+                        <div class="line"></div>
 
-                     <a href="">
-                        <li class="project">
-                           <img src="./asstes/works/meh2.jpg" alt="">
-                           <div class="project-name">
-                              <p>Lite Pokedex</p>
-                              <p>2023</p>
-                           </div>
-                           <svg class="right" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
-                              width="48">
-                              <path d="M450-120v-606l-90 90-42-42 162-162 162 162-42 42-90-90v606h-60Z" />
-                           </svg>
-                        </li>
-                     </a>
+                        <a href="">
+                           <li class="project">
+                              <img src="./asstes/works/meh2.jpg" alt="">
+                              <div class="project-name">
+                                 <p>Siperu</p>
+                                 <p>2023</p>
+                              </div>
+                              <svg class="right" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960"
+                                 width="48">
+                                 <path d="M450-120v-606l-90 90-42-42 162-162 162 162-42 42-90-90v606h-60Z" />
+                              </svg>
+                           </li>
+                        </a>
 
-                  </ul>
+                     </ul>
+                  </div>
                </div>
             </div>
          </section>
 
          <div class="mek"></div>
 
-         <section id="Contact">
-            <div class="contentContact">
+         <section data-scroll-section>
+            <div id="Contact">
+               <div class="contentContact">
 
-               <div class="textContact">
-                  <div class="this">
-                     <h2 class="contact"><a href="mailto:akmalaanwar@gmail.com" target="_blank">Interested? Let's
-                           Talk!</a></h2>
+                  <div class="textContact">
+                     <div class="this">
+                        <h2 class="contact"><a href="mailto:akmalaanwar@gmail.com" target="_blank">Interested? Let's
+                              Talk!</a></h2>
+                     </div>
                   </div>
-               </div>
 
-               <div class="footer">
-                  <div class="copyright">
-                     <h5>©Trippa 2021</h5>
-                  </div>
-                  <div class="socialMedia">
-                     <h5>Also Visit:</h5>
-                     <ul class="socList">
-                        <li class="social" title="Gmail"><a href="https://www.instagram.com/akmal__aa/" target="_blank">
-                              <svg class="svgSocial instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                 viewBox="0 0 20 20">
-                                 <path
-                                    d="M13 10a3 3 0 1 1-6 0c0-.171.018-.338.049-.5H6v3.997c0 .278.225.503.503.503h6.995a.503.503 0 0 0 .502-.503V9.5h-1.049c.031.162.049.329.049.5zm-3 2a2 2 0 1 0-.001-4.001A2 2 0 0 0 10 12zm2.4-4.1h1.199a.301.301 0 0 0 .301-.3V6.401a.301.301 0 0 0-.301-.301H12.4a.301.301 0 0 0-.301.301V7.6c.001.165.136.3.301.3zM10 .4A9.6 9.6 0 0 0 .4 10a9.6 9.6 0 0 0 9.6 9.6a9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 10 .4zm5 13.489C15 14.5 14.5 15 13.889 15H6.111C5.5 15 5 14.5 5 13.889V6.111C5 5.5 5.5 5 6.111 5h7.778C14.5 5 15 5.5 15 6.111v7.778z" />
-                              </svg>
-                           </a></li>
-                        <li class="social" title="Linkedin"><a
-                              href="https://www.linkedin.com/in/akmal-aliffandhi-anwar-530b53202/" target="_blank">
-                              <svg class="svgSocial linkedin" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                 viewBox="0 0 20 20">
-                                 <path
-                                    d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699v3.699z" />
-                              </svg>
-                           </a></li>
-                        <li class="social" title="Github"><a href="https://github.com/akmalaa" target="_blank">
-                              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                              <svg class="svgSocial Github" xmlns="http://www.w3.org/2000/svg" width="1024"
-                                 height="1024" viewBox="0 0 1024 1024">
-                                 <path
-                                    d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5C64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9c26.4 39.1 77.9 32.5 104 26c5.7-23.5 17.9-44.5 34.7-60.8c-140.6-25.2-199.2-111-199.2-213c0-49.5 16.3-95 48.3-131.7c-20.4-60.5 1.9-112.3 4.9-120c58.1-5.2 118.5 41.6 123.2 45.3c33-8.9 70.7-13.6 112.9-13.6c42.4 0 80.2 4.9 113.5 13.9c11.3-8.6 67.3-48.8 121.3-43.9c2.9 7.7 24.7 58.3 5.5 118c32.4 36.8 48.9 82.7 48.9 132.3c0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9c177.1-59.7 304.6-227 304.6-424.1c0-247.2-200.4-447.3-447.5-447.3z" />
-                              </svg>
-                           </a></li>
-                     </ul>
+                  <div class="footer">
+                     <div class="copyright">
+                        <h5>Indonesia © Trippa 2021</h5>
+                     </div>
+                     <div class="socialMedia">
+                        <h5>Also Visit:</h5>
+                        <ul class="socList">
+                           <li class="social" title="Gmail"><a href="https://www.instagram.com/akmal__aa/"
+                                 target="_blank">
+                                 <svg class="svgSocial instagram" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 20 20">
+                                    <path
+                                       d="M13 10a3 3 0 1 1-6 0c0-.171.018-.338.049-.5H6v3.997c0 .278.225.503.503.503h6.995a.503.503 0 0 0 .502-.503V9.5h-1.049c.031.162.049.329.049.5zm-3 2a2 2 0 1 0-.001-4.001A2 2 0 0 0 10 12zm2.4-4.1h1.199a.301.301 0 0 0 .301-.3V6.401a.301.301 0 0 0-.301-.301H12.4a.301.301 0 0 0-.301.301V7.6c.001.165.136.3.301.3zM10 .4A9.6 9.6 0 0 0 .4 10a9.6 9.6 0 0 0 9.6 9.6a9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 10 .4zm5 13.489C15 14.5 14.5 15 13.889 15H6.111C5.5 15 5 14.5 5 13.889V6.111C5 5.5 5.5 5 6.111 5h7.778C14.5 5 15 5.5 15 6.111v7.778z" />
+                                 </svg>
+                              </a></li>
+                           <li class="social" title="Linkedin"><a
+                                 href="https://www.linkedin.com/in/akmal-aliffandhi-anwar-530b53202/" target="_blank">
+                                 <svg class="svgSocial linkedin" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="20" viewBox="0 0 20 20">
+                                    <path
+                                       d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4zM7.65 13.979H5.706V7.723H7.65v6.256zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973zm8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699v3.699z" />
+                                 </svg>
+                              </a></li>
+                           <li class="social" title="Github"><a href="https://github.com/akmalaa" target="_blank">
+                                 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                                 <svg class="svgSocial Github" xmlns="http://www.w3.org/2000/svg" width="1024"
+                                    height="1024" viewBox="0 0 1024 1024">
+                                    <path
+                                       d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5C64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9c26.4 39.1 77.9 32.5 104 26c5.7-23.5 17.9-44.5 34.7-60.8c-140.6-25.2-199.2-111-199.2-213c0-49.5 16.3-95 48.3-131.7c-20.4-60.5 1.9-112.3 4.9-120c58.1-5.2 118.5 41.6 123.2 45.3c33-8.9 70.7-13.6 112.9-13.6c42.4 0 80.2 4.9 113.5 13.9c11.3-8.6 67.3-48.8 121.3-43.9c2.9 7.7 24.7 58.3 5.5 118c32.4 36.8 48.9 82.7 48.9 132.3c0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9c177.1-59.7 304.6-227 304.6-424.1c0-247.2-200.4-447.3-447.5-447.3z" />
+                                 </svg>
+                              </a></li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>

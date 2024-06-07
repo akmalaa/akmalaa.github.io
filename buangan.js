@@ -1,3 +1,15 @@
+// let j = 0;
+// let decrement = 0.1;
+// setInterval (() => {
+//     const name = document.querySelector('.myName');
+//     name.style.transform = `translateX(${j}%)`;
+//         if (j <= -396) {
+//             j = 110;
+//         } else {
+//             j -= decrement;
+//         }
+// }, 1);
+
 // loading
 const loadWord = document.querySelectorAll('.loading-word');
 const loadWrap = document.querySelector('.loading-wrap');
@@ -50,8 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const scroll = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-      lerp: 0.024
+      smooth: true
     });
   
     scroll.on('scroll', function() {
@@ -73,6 +84,71 @@ document.addEventListener('DOMContentLoaded', function() {
             burgerDis.style.opacity = '1';
         }
     });
+
+    // scroll.on('scroll', function() {
+    //     let titleAbout =  document.querySelector(".titleAbout");
+    //     let titleAboutAppear = titleAbout.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.2;
+
+    //     if (titleAboutAppear < screenPosition){
+    //         titleAbout.classList.add("titleAboutAppear");
+    //     }
+    //     // else if (titleAboutAppear > screenPosition){
+    //     //     titleAbout.classList.remove("titleAboutAppear");
+    //     // }
+    // });
+    
+    // scroll.on('scroll', function() {
+    //     let text1 =  document.querySelector(".text1");
+    //     let text1Appear = text1.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.5;
+
+    //     if (text1Appear < screenPosition){
+    //         text1.classList.add("text1Appear");
+    //     }
+    //     // else if (text1Appear > screenPosition){
+    //     //     text1.classList.remove("text1Appear");
+    //     // }
+    // });
+    
+    // scroll.on('scroll', function() {
+    //     let text2 =  document.querySelector(".text2");
+    //     let text2Appear = text2.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.5;
+
+    //     if (text2Appear < screenPosition){
+    //         text2.classList.add("text2Appear");
+    //     }
+    //     // else if (text2Appear > screenPosition){
+    //     //     text2.classList.remove("text2Appear");
+    //     // }
+    // });
+    
+    // scroll.on('scroll', function() {
+    //     let text2 =  document.querySelector(".titleSkill");
+    //     let text2Appear = text2.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.2;
+
+    //     if (text2Appear < screenPosition){
+    //         text2.classList.add("titleSkillAppear");
+    //     }
+    //     // else if (text2Appear > screenPosition){
+    //     //     text2.classList.remove("titleSkillAppear");
+    //     // }
+    // });
+    
+    // scroll.on('scroll', function() {
+    //     let text2 =  document.querySelector(".skillCoding");
+    //     let text2Appear = text2.getBoundingClientRect().top;
+    //     let screenPosition = window.innerHeight / 1.5;
+
+    //     if (text2Appear < screenPosition){
+    //         text2.classList.add("skillCodingAppear");
+    //     }
+    //     // else if (text2Appear > screenPosition){
+    //     //     text2.classList.remove("skillCodingAppear");
+    //     // }
+    // });
     
     scroll.on('scroll', function() {
         let titleProject =  document.querySelector(".titleProject");
@@ -82,6 +158,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (titleProjectAppear < screenPosition){
             titleProject.classList.add("titleProjectAppear");
         }
+        // else if (titleProjectAppear > screenPosition){
+        //     titleProject.classList.remove("titleProjectAppear");
+        // }
     });
     
     scroll.on('scroll', function() {
@@ -92,6 +171,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (projectsContainerAppear < screenPosition){
             projectsContainer.classList.add("projectsContainerAppear");
         }
+        // else if (projectsContainerAppear > screenPosition){
+        //     projectsContainer.classList.remove("projectsContainerAppear");
+        // }
     });
     
     scroll.on('scroll', function() {
@@ -102,6 +184,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (textContactAppear < screenPosition){
             textContact.classList.add("textContactAppear");
         }
+        // else if (textContactAppear > screenPosition){
+        //     textContact.classList.remove("textContactAppear");
+        // }
     });
     
     scroll.on('scroll', function() {
@@ -112,6 +197,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (textContactAppear < screenPosition){
             textContact.classList.add("textContactAppear");
         }
+        // else if (textContactAppear > screenPosition){
+        //     textContact.classList.remove("textContactAppear");
+        // }
     });
    
     var prevScrollpos = scroll.scroll.instance.scroll.y;
@@ -225,9 +313,11 @@ burger.addEventListener('click', () => {
     }
 });
 
-for(let i = 0; i < 4 ; i++){
-    a[i].addEventListener('click', () => {
-        contNav.classList.remove('isActive')
-    }) 
-}
+
+
+// setInterval (() => {
+//     const name = document.querySelector('.myName');
+//     name.style.transform = `translateX(${j}%)`;
+// }, 1000);
+
 
