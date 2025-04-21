@@ -612,8 +612,7 @@ ul.skillList {
    padding: 210px 0px;
 }
 
-.this::after {
-   /*52*/
+/*.this::after {
    content: "";
    position: absolute;
    left: 0;
@@ -646,7 +645,7 @@ ul.skillList {
 
 .textContact:hover .this::after {
    transform: scale(1);
-}
+}*/
 
 .this h2 {
    border: none;
